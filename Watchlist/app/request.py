@@ -81,6 +81,7 @@ def search_movie(movie_name):
   with urllib.request.urlopen(search_movie_url) as url:
     search_movie_data = url.read()
     search_movie_response = json.loads(search_movie_data)
+
     search_movie_results = None
 
     if search_movie_response['results']:
